@@ -1,0 +1,22 @@
+{
+  "name": "testcafe_tests",
+  "version": "1.0.0",
+  "description": "Automated test using testcafe",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome ./tests"
+  },
+  "keywords": [
+    "TestCafe",
+    "Testing",
+    "Automation"
+  ],
+  "author": "Preethi",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.1.2",
+    "testcafe": "^1.9.4",
+    "testcafe-reporter-html": "^1.4.6",
+    "xpath-to-css": "^1.0.5"
+  }
+}
