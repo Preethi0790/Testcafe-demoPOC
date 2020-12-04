@@ -11,10 +11,10 @@ export default class LoginPage {
         this.invalid_login_error = Selector('ul[class*=fieldErrors]')
     }
     
-/* async login (){
+async signin (){
 await t
 .click(this.home_sign_btn)
-}*/
+}
 
 async loggingPage (usrname, passwd){
 await t 
