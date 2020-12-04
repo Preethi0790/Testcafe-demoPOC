@@ -4,7 +4,7 @@
   "description": "Automated test using testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./tests"
+    "test": "testcafe chrome ./tests --reporter html:./report/testreporter.html"
   },
   "keywords": [
     "TestCafe",
