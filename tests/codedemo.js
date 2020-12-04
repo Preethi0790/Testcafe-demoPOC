@@ -24,7 +24,7 @@ fixture `Test suite for code academy login page`
     })
 
 test('User with invalid Login credentials', async t => {
-    await t.click(loginPage.home_sign_btn)
+    await loginPage.signin()
     await t.expect(loginPage.login_form.exists).ok()
     await loginPage.loggingPage("invalid user", "invalid password")
     // validating error message
@@ -32,16 +32,16 @@ test('User with invalid Login credentials', async t => {
 })
 
 test('User with valid Login credentials and logout', async t => {
-    await t.click(loginPage.home_sign_btn)
+    await loginPage.signin()
     await t.expect(loginPage.login_form.exists).ok()
     await loginPage.loggingPage("preethig701@gmail.com", "codepass@123")
+    // validating successfull login
+    await t.expect(Selector('title').innerText).eql('Dashboard | Codecademy')
     // screenshot of the Home page
     await t.takeScreenshot({
         path: '/screenshots/loginpage.png',
         fullPage: true
     })
-    // validating successfull login
-    await t.expect(Selector('title').innerText).eql('Dashboard | Codecademy')
     // resize window 
     await t.resizeWindow(1366,768)
     // logout
